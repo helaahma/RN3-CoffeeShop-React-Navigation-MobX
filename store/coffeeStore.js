@@ -12,6 +12,7 @@ class CoffeeStore {
       let cafes = res.data;
       this.cafes = cafes;
       this.loading = false;
+      console.log("CAFES", cafes);
     } catch (err) {
       console.error(err);
     }
