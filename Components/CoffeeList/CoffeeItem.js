@@ -9,7 +9,7 @@ import styles from "./styles";
 
 const CoffeeItem = ({ cafe, navigation }) => {
   const handlePress = () => {
-    navigation.navigate("Detail", { cafeID: cafe.id });
+    navigation.navigate("Detail", { cafeID: cafe.id, name: cafe.name });
   };
   return (
     <ImageBackground

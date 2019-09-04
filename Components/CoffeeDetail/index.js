@@ -20,6 +20,7 @@ import styles from "./styles";
 
 // Store
 import coffeeStore from "../../store/coffeeStore";
+import CardHeader from "../CoffeeList/CardHeader";
 
 class CoffeeDetail extends Component {
   state = {
@@ -99,5 +100,14 @@ class CoffeeDetail extends Component {
     );
   }
 }
+CoffeeDetail.navigationOptions = () => {
+  title: this.props.navigation.getParam("name");
+};
+CoffeeDetail.navigationOptions = ({ navigation }) => {
+  return {
+    title: navigation.getParam("name"),
+    headerRight: <CardHeader />
+  };
+};
 
 export default observer(CoffeeDetail);

@@ -12,7 +12,17 @@ const StackScreens = createStackNavigator(
     Cart: CartScreen
   },
   {
-    initialRouteName: "login"
+    initialRouteName: "login",
+    defaultNavigationOptions: {
+      headerTintColor: "white",
+      headerStyle: {
+        backgroundColor: "rgb(20,90,100)"
+      },
+      headerTextStyle: {
+        fontWeight: "bold"
+      },
+      cardStyle: "rgb(20,90,100)"
+    }
   }
 );
 
